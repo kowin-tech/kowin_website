@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and temporary files
+*.log
+*.cache
+error_log
+
+# Environment and config files (if needed in future)
+.env
+config.php
+
+# Build artifacts (if you add a build process later)
+node_modules/
+dist/
+build/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Project management and internal documentation
+TODO.md
+TODO.txt
+NOTES.md
+NOTES.txt
+.todo
+internal/

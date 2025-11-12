@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kowin Tech Vicidial Contact Center System - Print-Ready Brochure</title>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-light: #3b82f6;
+            --secondary: #0f172a;
+            --accent: #f97316;
+            --accent-light: #fdba74;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --dark-gray: #475569;
+            --border: #cbd5e1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            padding: 0;
+        }
+        
+        .document {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            page-break-before: always;
+        }
+        
+        /* This class will be applied to the Contact Us section to prevent page break */
+        .no-page-break {
+            page-break-before: auto;
+        }
+        
+        .cover {
+            background: linear-gradient(45deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        
+        .logo {
+            margin-bottom: 30px;
+        }
+        
+        .logo img {
+            max-width: 300px;
+            height: auto;
+        }
+        
+        .title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+            margin-top: 20px;
+        }
+        
+        h2 {
+            font-size: 28px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+            margin-top: 40px;
+            color: var(--primary);
+        }
+        
+        h3 {
+            font-size: 22px;
+            margin-top: 20px;
+            color: var(--primary);
+        }
+        
+        h4 {
+            font-size: 18px;
+            margin-top: 25px;
+            color: var(--dark-gray);
+        }
+        
+        p {
+            margin-bottom: 20px;
+            /* text-align: justify; */
+        }
+        
+        ul, ol {
+            margin-bottom: 25px;
+            margin-left: 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .feature-highlight {
+            background-color: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .feature-highlight h4 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        
+        .feature-highlight p {
+            margin-bottom: 0;
+        }
+        
+        .two-columns {
+            display: flex;
+            gap: 40px;
+            margin: 25px 0;
+        }
+        
+        .column {
+            flex: 1;
+        }
+        
+        .infographic {
+            text-align: center;
+            /* margin: 10px 0; */
+            /* padding: 10px; */
+            background-color: var(--light);
+            border-radius: 8px;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .infographic svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .callout {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            margin: 1px 0;
+            border-radius: 8px;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .callout h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .conclusion {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1px;
+            text-align: center;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+            margin-top: 40px; /* Added margin to create space between sections */
+        }
+        
+        .conclusion h2 {
+            color: white;
+            border-bottom: none;
+        }
+        
+        .contact-info {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .contact-info p {
+        margin: 2px 0; /* Reduce the margin between lines */
+    }
+        
+        .footer {
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--gray);
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .key-feature {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .key-feature h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .image-placeholder {
+            background-color: var(--light-gray);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 8px;
+            color: var(--gray);
+            font-size: 18px;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        /* Summary Section Styles */
+        .summary-section {
+            margin: 30px 0 50px;
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 30px;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .summary-section h2 {
+            text-align: center;
+            margin-top: 0;
+            color: var(--secondary);
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .summary-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .summary-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        .summary-item h3 {
+            margin-top: 0;
+            margin-right: 40px;
+            font-size: 18px;
+            color: var(--primary);
+        }
+        
+        .summary-item p {
+            margin-bottom: 0;
+            font-size: 15px;
+            color: var(--dark-gray);
+            text-align: left;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        th, td {
+            padding: 10px 10px;
+            font-size: 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        th {
+            background-color: var(--light);
+            font-weight: bold;
+            color: var(--secondary);
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+        
+        tr:hover {
+            background-color: var(--light);
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body, .document {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .document {
+                box-shadow: none;
+            }
+            
+            /* Force showing backgrounds for printing */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Improve page breaks */
+            h1, h2 {
+                page-break-after: avoid;
+            }
+            
+            .section {
+                page-break-before: always;
+            }
+            
+            /* Prevent page break for the contact section */
+            .no-page-break {
+                page-break-before: auto;
+            }
+            
+            .two-columns {
+                page-break-inside: avoid;
+            }
+            
+            .infographic, .callout, .key-feature, .summary-item {
+                page-break-inside: avoid;
+            }
+            
+            .summary-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .summary-item {
+                break-inside: avoid;
+            }
+            
+            /* Keep conclusion section together with the previous section */
+            .conclusion {
+                page-break-before: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .two-columns {
+                flex-direction: column;
+            }
+            
+            .title {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <!-- COVER PAGE -->
+        <section class="cover">
+            <div class="logo">
+                <img src="https://kowin.co.za/images/logo-white.png" alt="KOWIN TECH">
+            </div>
+            <h1 class="title">Vicidial Contact Center System</h1>
+            <p class="subtitle">A comprehensive, Vicidial-based solution optimized for outbound survey campaigns with seamless integration features and expert campaign management</p>
+        </section>
+        
+        <!-- INTRODUCTION & OVERVIEW -->
+        <section class="content">
+            <p>Empower your contact center with a comprehensive, Vicidial-based solution optimized for outbound survey campaigns. Kowin Tech's contact center platform combines robust outbound dialing capabilities with seamless integration features, advanced reporting, and expert campaign management services. Our solution is designed to help you maximize contact rates, streamline survey collection, and integrate effortlessly with your existing tools – all while providing a blended environment for both outbound and inbound interactions.</p>
+            
+            <div class="summary-section">
+                <h2>Solution Overview</h2>
+                <p>Our Vicidial Contact Center System provides a complete toolkit for maximizing the effectiveness of your outbound campaigns. Here's what makes our solution stand out:</p>
+                
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="summary-icon">1</div>
+                        <h3>Comprehensive Dialing Solutions</h3>
+                        <p>Powerful predictive dialing with seamless inbound/outbound blending capabilities. Handle outbound survey campaigns while managing incoming calls in one unified system, maximizing agent efficiency through flexible dialing modes.</p>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <div class="summary-icon">2</div>
+                        <h3>Seamless Integration</h3>
+                        <p>Connect with your existing tools through webhooks, call URLs, agent webform buttons, and iFrame embedding capabilities, ensuring smooth data flow between systems.</p>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <div class="summary-icon">3</div>
+                        <h3>Voice Broadcast & Lead Nurturing</h3>
+                        <p>Engage thousands of contacts simultaneously with pre-recorded messages, identify interested parties, and clean your lead lists automatically.</p>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <div class="summary-icon">4</div>
+                        <h3>Multi-Channel SMS Engagement</h3>
+                        <p>Extend your outreach with automated SMS triggers, agent-initiated texting, and two-way SMS capabilities that integrate with your call records.</p>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <div class="summary-icon">5</div>
+                        <h3>Expert Campaign Management</h3>
+                        <p>Benefit from our professional guidance in KPI tracking, weekly strategy meetings, and proven dialing tactics like localized caller ID and multi-CLI rotation.</p>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <div class="summary-icon">6</div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Make data-driven decisions with customizable Looker Studio dashboards showing real-time performance metrics for campaigns, agents, and lead lists.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECTION 1: OUTBOUND DIALING -->
+        <section class="section content">
+            <h2>Outbound Dialing Excellence for Surveys</h2>
+            
+            <p>Our platform delivers powerful outbound dialing tailored to high-volume survey campaigns and outreach programs. Whether you're conducting market research or customer feedback calls, our Vicidial-based system ensures your agents reach more people in less time:</p>
+            
+            <div class="key-feature">
+                <h3><span class="feature-icon">1</span> Predictive & Automated Dialing</h3>
+                <p>Utilize adaptive predictive dialing to keep agents busy with live respondents, or run automated broadcast campaigns (Press-1 surveys) to engage contacts with pre-recorded messages.</p>
+            </div>
+            
+            <div class="key-feature">
+                <h3><span class="feature-icon">2</span> Survey Campaign Optimization</h3>
+                <p>Run dedicated survey campaigns that can play an introductory message or question, then transfer interested respondents to live agents or call menus for data capture. This increases efficiency by filtering unresponsive contacts and focusing agent time on willing participants.</p>
+            </div>
+            
+            <div class="key-feature">
+                <h3><span class="feature-icon">3</span> High Contact Throughput</h3>
+                <p>Scale your outbound efforts with the ability to dial thousands of leads, leveraging features like answering machine detection (AMD) to skip voicemails or deliver tailored messages to answering machines. The result is higher connect rates and more completed surveys.</p>
+            </div>
+            
+            <div class="key-feature">
+                <h3><span class="feature-icon">4</span> Flexible Dialing Modes</h3>
+                <p>Support for multiple dialing modes (predictive, power, preview, and agent-initiated) gives you full control. Agents can preview respondent details before calling or let the system automatically dial at the optimal rate for maximum productivity.</p>
+            </div>
+            
+            <div class="feature-highlight">
+                <h4>Bottom Line:</h4>
+                <p>Our outbound engine helps you reach your audience efficiently and gather survey data effectively, improving response rates and agent productivity.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 2: INTEGRATION -->
+        <section class="section content">
+            <h2>Seamless Integration with Your Tools</h2>
+            
+            <p>Kowin Tech's system is built to integrate smoothly with external tools and workflows, ensuring your dialer works in harmony with your business processes. Key integration features include:</p>
+            
+            <h3>Webhook on Disposition (Dispo Call URL)</h3>
+            <p>Automatically trigger external webhooks when a call is finished and an outcome is selected. This means every time an agent dispositions a call, the system can instantly send the results (e.g. survey answers, call outcome, agent notes) to your external CRM, database, or application. No manual exports – data flows in real-time to where you need it.</p>
+            
+            <h3>Start Call URL</h3>
+            <p>Kick off external actions at the moment a call connects. Our platform can call a specified URL as soon as a call is sent to an agent, allowing you to log call events or fetch customer data from an external system right at call start. This helps in syncing live call information with third-party systems or initiating related workflows.</p>
+            
+            <h3>Agent Webform Button</h3>
+            <p>Equip agents with a one-click webform button that opens a custom web page or CRM screen pre-filled with the customer's information. Agents can update records, fill out survey forms, or view client history without wasting time searching—boosting efficiency and accuracy during calls.</p>
+            
+            <h3>iFrame Embedding</h3>
+            <p>Embed external web pages directly into the agent interface. For example, agents can view or input data into your existing survey application or CRM inside the call script window, all within the Vicidial agent screen. This integrated desktop experience means agents don't juggle multiple applications; everything they need is in one place.</p>
+            
+            <h3>Open API & Custom Integration</h3>
+            <p>(Optional) In addition to built-in features, our Vicidial-based solution supports API integration and customization. We can work with your technical team to connect other tools or build bespoke integrations so that the dialer fits perfectly into your ecosystem.</p>
+            
+            <div class="infographic">
+                <svg width="800" height="210" viewBox="0 0 800 210" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Integration Flow Diagram -->
+                    <rect x="60" y="80" width="120" height="60" fill="#3b82f6" stroke="#1a56db" stroke-width="2" rx="8" ry="8" />
+                    <text x="120" y="115" text-anchor="middle" font-size="14" fill="white">Vicidial System</text>
+                    
+                    <!-- Arrows going out -->
+                    <path d="M 180 95 L 250 50" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="250,50 240,52 244,60" fill="#64748b" />
+                    
+                    <path d="M 180 110 L 250 110" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="250,110 240,106 240,114" fill="#64748b" />
+                    
+                    <path d="M 180 125 L 250 170" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="250,170 240,168 244,160" fill="#64748b" />
+                    
+                    <!-- External systems -->
+                    <rect x="250" y="20" width="120" height="60" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="8" ry="8" />
+                    <text x="310" y="45" text-anchor="middle" font-size="14" fill="#0f172a">Start Call URL</text>
+                    <text x="310" y="65" text-anchor="middle" font-size="12" fill="#64748b">Initial Connection</text>
+                    
+                    <rect x="250" y="80" width="120" height="60" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="8" ry="8" />
+                    <text x="310" y="105" text-anchor="middle" font-size="14" fill="#0f172a">iFrame Embed</text>
+                    <text x="310" y="125" text-anchor="middle" font-size="12" fill="#64748b">During Call</text>
+                    
+                    <rect x="250" y="140" width="120" height="60" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="8" ry="8" />
+                    <text x="310" y="165" text-anchor="middle" font-size="14" fill="#0f172a">Webhook</text>
+                    <text x="310" y="185" text-anchor="middle" font-size="12" fill="#64748b">After Call</text>
+                    
+                    <!-- Arrows to CRM -->
+                    <path d="M 370 50 L 440 50" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="440,50 430,46 430,54" fill="#64748b" />
+                    
+                    <path d="M 370 110 L 440 110" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="440,110 430,106 430,114" fill="#64748b" />
+                    
+                    <path d="M 370 170 L 440 170" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="440,170 430,166 430,174" fill="#64748b" />
+                    
+                    <!-- CRM -->
+                    <rect x="440" y="80" width="120" height="60" fill="#fdba74" stroke="#f97316" stroke-width="2" rx="8" ry="8" />
+                    <text x="500" y="115" text-anchor="middle" font-size="14" fill="#0f172a">Your CRM/Tools</text>
+                    
+                    <!-- Arrow back to agent -->
+                    <path d="M 560 110 L 630 110" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="630,110 620,106 620,114" fill="#64748b" />
+                    
+                    <!-- Agent -->
+                    <rect x="630" y="80" width="120" height="60" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="8" ry="8" />
+                    <text x="690" y="115" text-anchor="middle" font-size="14" fill="#0f172a">Unified Agent View</text>
+                </svg>
+            </div>
+            
+            <div class="feature-highlight">
+                <h4>Bottom line:</h4>
+                <p>We eliminate data silos by making sure call data and external systems talk to each other seamlessly. Your outbound survey campaigns will not only collect valuable data but also automatically push that data to your analytics tools, CRM, or any platform of your choice in real time.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 3: VOICE BROADCAST -->
+        <section class="section content">
+            <h2>Voice Broadcast & Lead Nurturing</h2>
+            
+            <p>Leverage voice broadcasting to amplify your reach and prepare your leads for live interaction. This feature allows you to send a pre-recorded voice message to a large list of contacts, which is ideal for initial engagement and cleaning up lead lists:</p>
+            
+            <h3>Initial Engagement</h3>
+            <p>Quickly broadcast a survey invitation or important announcement to thousands of contacts. Recipients can be prompted to press a key (e.g. "Press 1 to participate in the survey") which will automatically route interested respondents to an available agent or an interactive voice response (IVR) survey. This ensures your agents spend time only with contacts who have expressed interest, boosting conversion rates.</p>
+            
+            <h3>Scrubbing Old Leads</h3>
+            <p>Use voice broadcasts to scrub older or unresponsive leads. By calling with a recorded message, you can detect which numbers are no longer in service, which go to voicemail, and which still reach a live person. This process cleans your lists, improves data quality, and increases future contactability by focusing on valid numbers.</p>
+            
+            <h3>High Efficiency Outreach</h3>
+            <p>One agent or campaign manager can initiate a voice broadcast that touches all contacts in a list without one-by-one dialing. The system handles the heavy lifting – dialing and playing messages – while your team monitors results and handles callbacks or live transfers from interested contacts.</p>
+            
+            <h3>Compliance and Personalization</h3>
+            <p>Our system can throttle call volume and insert compliance-safe options (like DNC opt-outs or safe harbor messages for drops) to adhere to regulations. You can also personalize broadcasts by region or list, and even localize the caller ID (CLI) so recipients see a familiar area code, increasing the likelihood they'll answer the call.</p>
+            
+            <p>By using voice broadcasts as a strategic first touch, you not only engage a broad audience quickly but also refine your lead pool for subsequent live calling or follow-up campaigns.</p>
+            
+            <div class="infographic">
+                <svg width="800" height="240" viewBox="0 0 800 240" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Voice Broadcast Workflow -->
+                    <rect x="100" y="80" width="140" height="80" fill="#3b82f6" stroke="#1a56db" stroke-width="2" rx="8" ry="8" />
+                    <text x="170" y="120" text-anchor="middle" font-size="16" fill="white">Voice Broadcast</text>
+                    <text x="170" y="140" text-anchor="middle" font-size="12" fill="white">Pre-recorded Message</text>
+                    
+                    <!-- Left side input -->
+                    <rect x="20" y="90" width="40" height="60" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="4" ry="4" />
+                    <text x="40" y="120" text-anchor="middle" font-size="10" fill="#64748b" transform="rotate(-90 40,120)">Contact List</text>
+                    
+                    <path d="M 60 120 L 100 120" stroke="#64748b" stroke-width="2" fill="none" />
+                    <polygon points="100,120 90,116 90,124" fill="#64748b" />
+                    
+                    <!-- Output paths -->
+                    <path d="M 240 90 L 340 50" stroke="#64748b" stroke-width="2" fill="none" />
+                    <text x="290" y="60" text-anchor="middle" font-size="12" fill="#64748b">Press 1</text>
+                    <polygon points="340,50 330,52 334,60" fill="#64748b" />
+                    
+                    <path d="M 240 120 L 340 120" stroke="#64748b" stroke-width="2" fill="none" />
+                    <text x="290" y="110" text-anchor="middle" font-size="12" fill="#64748b">Press 2</text>
+                    <polygon points="340,120 330,116 330,124" fill="#64748b" />
+                    
+                    <path d="M 240 150 L 340 190" stroke="#64748b" stroke-width="2" fill="none" />
+                    <text x="290" y="180" text-anchor="middle" font-size="12" fill="#64748b">No Response</text>
+                    <polygon points="340,190 330,188 334,180" fill="#64748b" />
+                    
+                    <!-- Output boxes -->
+                    <rect x="340" y="20" width="140" height="60" fill="#fdba74" stroke="#f97316" stroke-width="2" rx="8" ry="8" />
+                    <text x="410" y="50" text-anchor="middle" font-size="14" fill="#0f172a">Live Agent Transfer</text>
+                    <text x="410" y="70" text-anchor="middle" font-size="12" fill="#64748b">Interested Respondents</text>
+                    
+                    <rect x="340" y="90" width="140" height="60" fill="#fdba74" stroke="#f97316" stroke-width="2" rx="8" ry="8" />
+                    <text x="410" y="120" text-anchor="middle" font-size="14" fill="#0f172a">IVR Survey</text>
+                    <text x="410" y="140" text-anchor="middle" font-size="12" fill="#64748b">Automated Collection</text>
+                    
+                    <rect x="340" y="160" width="140" height="60" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2" rx="8" ry="8" />
+                    <text x="410" y="190" text-anchor="middle" font-size="14" fill="#64748b">List Cleaning</text>
+                    <text x="410" y="210" text-anchor="middle" font-size="12" fill="#64748b">Invalid/Unresponsive</text>
+                    
+                    <!-- Result arrows -->
+                    <path d="M 480 50 L 620 90" stroke="#f97316" stroke-width="2" fill="none" />
+                    <polygon points="620,90 610,88 614,80" fill="#f97316" />
+                    
+                    <path d="M 480 120 L 620 120" stroke="#f97316" stroke-width="2" fill="none" />
+                    <polygon points="620,120 610,116 610,124" fill="#f97316" />
+                    
+                    <path d="M 480 190 L 620 150" stroke="#cbd5e1" stroke-width="2" fill="none" />
+                    <polygon points="620,150 610,152 614,144" fill="#cbd5e1" />
+                    
+                    <!-- Results box -->
+                    <rect x="620" y="90" width="140" height="60" fill="#0f172a" stroke="#0f172a" stroke-width="2" rx="8" ry="8" />
+                    <text x="690" y="120" text-anchor="middle" font-size="14" fill="white">Optimized Results</text>
+                    <text x="690" y="140" text-anchor="middle" font-size="12" fill="#94a3b8">Higher Conversion Rates</text>
+                </svg>
+            </div>
+        </section>
+        
+        <!-- SECTION 4: SMS -->
+        <section class="section content">
+            <h2>SMS Follow-Up for Multi-Channel Engagement</h2>
+            
+            <p>Extend your outreach beyond voice calls with integrated SMS capabilities. Many prospects respond better to a text message, or you might want to reinforce your call with a follow-up SMS. Our contact center solution supports SMS integration to keep the conversation going:</p>
+            
+            <div class="two-columns">
+                <div class="column">
+                    <h3>Automated SMS Triggers</h3>
+                    <p>Send automatic SMS follow-ups based on call outcomes. For instance, if a call goes unanswered or a customer requests more info, the system can instantly send a pre-defined text message (e.g. a survey link, thank you note, or contact information) to re-engage that lead.</p>
+                    
+                    <h3>Agent-Initiated Texting</h3>
+                    <p>Agents can send templated SMS messages to contacts directly from the interface (or via an integrated CRM) with a single click. This is useful for confirming appointments made during calls, sending survey URLs for later completion, or providing opt-out confirmations.</p>
+                </div>
+                
+                <div class="column">
+                    <h3>Two-Way SMS Support</h3>
+                    <p>(If applicable) Optionally allow recipients to reply to text messages and route these responses back to your team or CRM. This creates an omnichannel experience, letting contacts engage on their preferred channel and your agents to continue the conversation via text if needed.</p>
+                    
+                    <h3>Integrated View</h3>
+                    <p>All SMS interactions can be logged alongside call records, giving supervisors a full picture of outreach activities. SMS metrics (delivery, response rates) can also be included in your campaign reports to measure effectiveness.</p>
+                </div>
+            </div>
+            
+            <h3>Greater Contactability</h3>
+            <p>By adding SMS to your toolkit, you increase the chances of reaching your audience. Some people may ignore unknown calls but respond to a well-crafted text. SMS follow-ups ensure that your survey invitation or message gets seen, and they provide an alternate path for engagement beyond the phone call.</p>
+            
+            <div class="feature-highlight">
+                <p>In summary, our SMS integration means your campaigns aren't limited to voice – you can engage leads across channels, improve contact rates, and provide a more convenient response option for your audience.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 5: INBOUND BLENDING -->
+        <section class="section content">
+            <h2>Inbound Blending for Unified Campaigns</h2>
+            
+            <p>Modern contact centers need to handle both outbound and inbound communication without missing a beat. Kowin Tech's Vicidial system supports blended campaigns, allowing your team to manage incoming calls while running outbound surveys, all in one unified platform:</p>
+            
+            <h3>Seamless Switch Between Outbound and Inbound</h3>
+            <p>Agents can be configured to handle outbound survey calls and automatically receive inbound calls (such as callbacks or incoming inquiries) in the same session. If your marketing campaign prompts customers to call back, those calls can be routed to the same agents conducting outbound calls, ensuring a consistent experience.</p>
+            
+            <h3>Priority Routing and Availability</h3>
+            <p>You can prioritize inbound calls so that when the phone rings, available agents immediately get the call. The system will momentarily pause outbound dialing for that agent, then resume once the inbound call is handled. This maximizes productivity while guaranteeing prompt attention to inbound leads.</p>
+            
+            <h3>Unified Agent Desktop</h3>
+            <p>Whether it's an incoming customer call or an outbound survey, the agent uses the same interface and has access to the same customer data and scripts. This unified approach reduces confusion and training time, and it helps agents provide better service since all context is in one place.</p>
+            
+            <h3>Balanced Workloads</h3>
+            <p>Blending helps keep agents engaged at all times – when inbound volume is low, outbound dialing fills the gaps; when inbound spikes, the system adjusts. This results in improved service levels for inbound calls and higher efficiency for outbound operations, without needing separate teams or systems.</p>
+            
+            <h3>Better Customer Experience</h3>
+            <p>If a contact from your survey list calls back (maybe from a missed call or after receiving a voice broadcast or SMS), the blended system can recognize the number and, if desired, route them to the appropriate campaign or agent group. The agent can greet them knowing they responded to the survey outreach, creating a smoother customer journey.</p>
+            
+            <div class="feature-highlight">
+                <p>Our inbound/outbound blending capability ensures you never miss opportunities and maintain optimal productivity, all within a single, easy-to-manage campaign setup.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 6: CAMPAIGN MANAGEMENT -->
+        <section class="section content">
+            <h2>Expert Campaign Management & Dialing Strategies</h2>
+            
+            <p>Technology alone isn't enough – effective outbound campaigns require the right strategy and continuous optimization. Kowin Tech doesn't just provide the software; we partner with you through our Campaign Management Services to maximize your success:</p>
+            
+            <h3>KPI Tracking & Analysis</h3>
+            <p>We help define key performance indicators (KPIs) for your campaigns (such as contact rate, conversion rate, average call duration, agent productivity, etc.) and continuously monitor these metrics. Our team provides regular reports and insights, so you always know how your campaigns are performing and where to adjust for better results.</p>
+            
+            <h3>Weekly Strategy Standups</h3>
+            <p>Stay agile with our consultative approach. We schedule weekly check-in meetings (standups) with your campaign managers to review performance, share insights, and plan tweaks to the campaign. This ongoing collaboration ensures that dialing strategies and survey approaches are refined based on real data and your evolving needs.</p>
+            
+            <h3>Advanced Dialing Strategies</h3>
+            <p>Our experts will implement and advise on proven dialing tactics to boost contact and conversion rates:</p>
+            
+            <h4>Localized Caller ID (CLI)</h4>
+            <p>Increase answer rates by displaying a local or recognizable number to each contact. We can dynamically match area codes or use regional numbers when calling different locales, making recipients more likely to pick up a call from a familiar-looking number.</p>
+            
+            <h4>Multi-CLI Rotation</h4>
+            <p>Protect your outbound numbers' reputation by rotating through a pool of caller IDs. This technique reduces the risk of any single number being flagged as spam. It helps combat spam detection apps and keeps your connect rates high over the long run.</p>
+            
+            <h4>Combatting Truecaller & Spam Labels</h4>
+            <p>We proactively manage your caller IDs to avoid detection and blocking by apps like Truecaller and carrier spam filters. Our strategy includes monitoring for flagged numbers, refreshing or registering numbers as needed, and varying call patterns to minimize the chance of being marked as spam. The goal is to ensure your calls actually reach the prospects instead of getting filtered out.</p>
+            
+            <h4>Optimal Call Timing & Pacing</h4>
+            <p>We'll help configure dialing schedules and pacing that respect time zones and optimal call times for your target audience, while staying compliant with regulations. This includes controlling drop call ratios and call abandonment to meet standards.</p>
+            
+            <h4>...and more</h4>
+            <p>From optimizing voicemail messages to recycling strategies for busy numbers, our team brings a wealth of best practices to your campaign.</p>
+            
+            <h3>Training and Support</h3>
+            <p>We provide training sessions for your supervisors and agents on using the system effectively and following the best practices in outbound calling and survey techniques. Our goal is to be an extension of your team – guiding you to higher productivity and better contact outcomes.</p>
+            
+            <div class="callout">
+                <h3>Partner for Success</h3>
+                <p>With Kowin Tech's campaign management services, you're not alone. We work hand-in-hand to continually improve your outreach, ensuring you get the most out of our powerful dialer platform and achieve your campaign goals.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 7: ANALYTICS -->
+        <section class="section content">
+            <h2>Advanced Reporting & Analytics with Looker Studio</h2>
+            
+            <p>Data-driven decision making is at the heart of successful contact centers. Our solution offers advanced reporting and analytics features, including integration with Google Looker Studio (formerly Data Studio) for customized, visual dashboards:</p>
+            
+            <div class="infographic">
+                <svg width="800" height="320" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dashboard Background - Made wider -->
+                    <rect x="30" y="50" width="740" height="220" fill="#ffffff" stroke="#64748b" stroke-width="2" rx="10" ry="10" />
+                    <rect x="30" y="50" width="740" height="40" fill="#1a56db" stroke="#1a56db" stroke-width="0" rx="10 10 0 0" ry="10 10 0 0" />
+                    <text x="400" y="75" text-anchor="middle" font-size="16" font-weight="bold" fill="white">Kowin Tech Analytics Dashboard</text>
+                    
+                    <!-- Line Chart -->
+                    <rect x="70" y="110" width="300" height="140" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="5" ry="5" />
+                    <text x="220" y="130" text-anchor="middle" font-size="14" fill="#0f172a">Contact Rate Over Time</text>
+                    <polyline points="90,210 130,190 170,200 210,170 250,150 290,165 330,140 350,130" stroke="#3b82f6" stroke-width="2" fill="none" />
+                    <line x1="90" y1="220" x2="350" y2="220" stroke="#64748b" stroke-width="1" />
+                    <line x1="90" y1="220" x2="90" y2="150" stroke="#64748b" stroke-width="1" />
+                    
+                    <!-- Call Outcomes Title - Moved higher -->
+                    <text x="520" y="110" text-anchor="middle" font-size="14" fill="#0f172a">Call Outcomes</text>
+                    
+                    <!-- Donut Chart with proper alignment -->
+                    <!-- Outer circle (gray) -->
+                    <circle cx="520" cy="180" r="60" fill="#64748b" />
+                    
+                    <!-- Segments layered in the right order -->
+                    <!-- Blue segment (42%) -->
+                    <path d="M 520 180 L 520 120 A 60 60 0 0 1 574 205 Z" fill="#3b82f6" />
+                    
+                    <!-- Orange segment (35%) -->
+                    <path d="M 520 180 L 574 205 A 60 60 0 0 1 469 211 Z" fill="#f97316" />
+                    
+                    <!-- Small border to make segments cleaner -->
+                    <circle cx="520" cy="180" r="30" fill="white" />
+                    
+                    <!-- Donut Chart Center Text -->
+                    <text x="520" y="175" text-anchor="middle" font-size="16" font-weight="bold" fill="#0f172a">3,542</text>
+                    <text x="520" y="195" text-anchor="middle" font-size="12" fill="#64748b">Total Calls</text>
+                    
+                    <!-- Legend - positioned to the right with more space -->
+                    <rect x="620" y="150" width="12" height="12" fill="#3b82f6" />
+                    <text x="636" y="160" font-size="12" fill="#0f172a">Connected (42%)</text>
+                    
+                    <rect x="620" y="180" width="12" height="12" fill="#f97316" />
+                    <text x="636" y="190" font-size="12" fill="#0f172a">No Answer (35%)</text>
+                    
+                    <rect x="620" y="210" width="12" height="12" fill="#64748b" />
+                    <text x="636" y="220" font-size="12" fill="#0f172a">Other (23%)</text>
+                    
+                    <!-- KPI Boxes -->
+                    <rect x="70" y="260" width="150" height="40" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="5" ry="5" />
+                    <text x="145" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#3b82f6">4,523</text>
+                    <text x="145" y="295" text-anchor="middle" font-size="12" fill="#64748b">Calls Made Today</text>
+                    
+                    <rect x="240" y="260" width="150" height="40" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="5" ry="5" />
+                    <text x="315" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#3b82f6">32%</text>
+                    <text x="315" y="295" text-anchor="middle" font-size="12" fill="#64748b">Contact Rate</text>
+                    
+                    <rect x="410" y="260" width="150" height="40" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="5" ry="5" />
+                    <text x="485" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#3b82f6">1.8%</text>
+                    <text x="485" y="295" text-anchor="middle" font-size="12" fill="#64748b">Drop Rate</text>
+                    
+                    <rect x="580" y="260" width="150" height="40" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="5" ry="5" />
+                    <text x="655" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#3b82f6">5:32</text>
+                    <text x="655" y="295" text-anchor="middle" font-size="12" fill="#64748b">Avg. Call Time</text>
+                </svg>
+            </div>
+            
+            <h3>Real-Time Dashboards</h3>
+            <p>We connect your contact center data to Looker Studio to generate live dashboards that are easy to read and share. Monitor agent performance, call volume, and survey completions in real-time. See at a glance how many calls are active, contact rates, and conversion rates as the day progresses.</p>
+            
+            <h3>Campaign Performance Reports</h3>
+            <p>Dive deep into each campaign's results. Track key metrics like total calls made, contacts reached, surveys completed, drop (abandon) rate, and conversion rate. Filter by date, list, or team to understand which campaigns or lead sources are most effective.</p>
+            
+            <h3>Agent Performance & QA</h3>
+            <p>Get detailed agent-level reports showing talk time, call outcomes, sales or survey completions, and adherence to schedule. Identify top performers and areas for coaching. Our reporting can also integrate call recordings or QA scores so you have a full picture of quality and productivity for each agent.</p>
+            
+            <h3>Lead List Analytics</h3>
+            <p>Not all lead lists are equal – our system can provide insights into list performance and contactability. See which lists or segments have the highest contact rates, which are yielding the most completions, and which might be exhausted. This helps in list management decisions and focusing effort where it counts.</p>
+            
+            <h3>Google Looker Studio Integration</h3>
+            <p>Because the data is fed into Looker Studio, you can easily customize reports and visuals to your needs – add your company's branding, combine data sources if needed, and grant access to stakeholders with ease. Interactive charts and graphs make it simple to spot trends and share results with your team or executives. Exporting and scheduling reports is straightforward, ensuring everyone stays informed.</p>
+            
+            <h3>Continuous Improvement</h3>
+            <p>With these analytics at your fingertips, making data-driven adjustments to campaigns becomes second nature. Maybe the report shows a dip in contact rate for a certain region – you can react by adjusting caller IDs or call times. Or if an agent's performance improves after training, you'll see it in the numbers. Our team can assist in interpreting the data and recommending actions during our weekly check-ins.</p>
+            
+            <div class="feature-highlight">
+                <p>In essence, our advanced reporting turns the rich data from your calling campaigns into actionable insights. You'll have full transparency on operations and the tools to continually optimize both agent performance and campaign outcomes.</p>
+            </div>
+        </section>
+        
+        <!-- SECTION 8: TRUSTED BY CLIENTS -->
+        <section class="section content">
+            <h2>Trusted by Clients – Your Success is Our Mission</h2>
+            
+            <p>Choosing Kowin Tech means partnering with a provider that is committed to your success. Our Vicidial-based contact center system is trusted by clients across various industries for its reliability, flexibility, and performance. We are confident in the results we deliver and are happy to offer testimonials and client references upon request.</p>
+            
+            <table>
+                <tr>
+                    <th>Industry</th>
+                    <th>Challenge</th>
+                    <th>Kowin Tech Solution</th>
+                    <th>Results</th>
+                </tr>
+                <tr>
+                    <td>Market Research</td>
+                    <td>Low survey completion rates</td>
+                    <td>Implemented Press-1 campaigns with live agent transfer</td>
+                    <td>48% increase in complete surveys</td>
+                </tr>
+                <tr>
+                    <td>Telemarketing</td>
+                    <td>High number of flagged calls</td>
+                    <td>Multi-CLI rotation with localized numbers</td>
+                    <td>35% improvement in answer rates</td>
+                </tr>
+                <tr>
+                    <td>Customer Service</td>
+                    <td>Disjointed inbound/outbound systems</td>
+                    <td>Blended campaign with unified agent desktop</td>
+                    <td>25% increase in agent productivity</td>
+                </tr>
+            </table>
+            
+            <div class="two-columns">
+                <div class="column">
+                    <h3>Proven Track Record</h3>
+                    <p>Our solution has powered successful survey campaigns and outbound initiatives for organizations in market research, customer service follow-ups, fundraising, and more. We can connect you with references who can speak to how we've increased their contact rates and streamlined their operations.</p>
+                    
+                    <h3>Dedicated Support</h3>
+                    <p>We pride ourselves on offering responsive, knowledgeable support. From initial onboarding and training through to live campaign assistance, our support team is there to ensure everything runs smoothly. Have a question or an issue? We're just a phone call or email away, with prompt resolution and guidance.</p>
+                </div>
+                
+                <div class="column">
+                    <h3>Continuous Innovation</h3>
+                    <p>We keep our platform up-to-date with the latest Vicidial enhancements and develop new features based on client feedback. When you partner with Kowin Tech, you benefit from a system that evolves with the industry – whether it's new communication channels, updated compliance rules, or emerging dialing strategies, we've got you covered.</p>
+                    
+                    <h3>Flexible Deployment</h3>
+                    <p>Whether you need an on-premise setup, a cloud-hosted solution, or a hybrid approach, we can accommodate your needs. Our engineers ensure the system is configured for high uptime, crystal-clear call quality, and data security, so you can trust your contact center infrastructure 100%.</p>
+                </div>
+            </div>
+            
+            <div class="callout">
+                <h3>Ready to Transform Your Contact Center?</h3>
+                <p>Let us help you transform your contact center operations. With Kowin Tech's Vicidial-based platform, you gain a powerful tool and a passionate partner invested in your success. Reach out to us today to discuss your outbound survey campaign needs, request a demo, or ask for client references – we're excited to show you what our solution can do for your business.</p>
+            </div>
+            
+            <!-- CONTACT SECTION - No page break -->
+            <section class="no-page-break conclusion">
+                <h2>Contact Us Today</h2>
+                <p>To learn more about our Vicidial Contact Center System and how it can empower your outreach campaigns</p>
+                <div class="contact-info">
+                    <p>Phone: +27 41 011 0090</p>
+                    <p>Email: info@kowin.co.za</p>
+                    <p>Web: kowin.co.za</p>
+                </div>
+            </section>
+        </section>
+        
+        <div class="footer">
+            <p>© 2025 Kowin Tech. All rights reserved. Vicidial is a registered trademark of its respective owner.</p>
+        </div>
+    </div>
+</body>
+</html>

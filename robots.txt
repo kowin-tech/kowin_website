@@ -1,0 +1,11 @@
+# Robots.txt for Kowin Tech Website
+# https://kowin.co.za
+
+User-agent: *
+Allow: /
+
+# Disallow error pages
+Disallow: /404.html
+
+# Sitemap location
+Sitemap: https://kowin.co.za/sitemap.xml
